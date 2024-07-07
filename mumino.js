@@ -1,7 +1,18 @@
 import { navbarHide } from "./animations/navbar.js";
-import { staggerFadeInAnimation, staggerSlideUpAnimation, staggerBlurInAnimation } from "./animations/itemAnimations.js";
-import { delayTextFadeInAnimation, delayFadeInAnimation, fadeInAnimation, heroHeadingAnimation, specialParagraphAnimation, sectionHeadingAnimation } from "./animations/textAnimations.js";
-import { createHorizontalScroller } from "./animations/customanimations.js";
+import {
+  staggerFadeInAnimation,
+  staggerSlideUpAnimation,
+  staggerBlurInAnimation,
+} from "./animations/itemAnimations.js";
+import {
+  delayTextFadeInAnimation,
+  delayFadeInAnimation,
+  fadeInAnimation,
+  heroHeadingAnimation,
+  specialParagraphAnimation,
+  sectionHeadingAnimation,
+} from "./animations/textAnimations.js";
+import { createHorizontalScroller } from "./animations/customAnimations.js";
 import { itemFadeInAnimation } from "./animations/itemAnimations.js";
 import { paragraphAnimation } from "./animations/itemAnimations.js";
 
@@ -38,7 +49,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   let textAnimations = function () {
     // if (fadeIn.length > 0) fadeInAnimation(fadeIn);
-    if (specialParagraph.length > 0) specialParagraphAnimation(specialParagraph);
+    if (specialParagraph.length > 0)
+      specialParagraphAnimation(specialParagraph);
     if (sectionHeading.length > 0) sectionHeadingAnimation(sectionHeading);
     if (heroHeading.length > 0) heroHeadingAnimation(heroHeading);
     if (paragraph.length > 0) paragraphAnimation(paragraph);
@@ -69,8 +81,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let twoPanelContent = ".two-panel_content";
     let twoPanelEnd = "bottom center";
 
-    if (areElementsPresent([twoPanelComponent, twoPanelPinned, twoPanelContent])) {
-      pinTwoPanel(twoPanelComponent, twoPanelPinned, twoPanelContent, twoPanelEnd);
+    if (
+      areElementsPresent([twoPanelComponent, twoPanelPinned, twoPanelContent])
+    ) {
+      pinTwoPanel(
+        twoPanelComponent,
+        twoPanelPinned,
+        twoPanelContent,
+        twoPanelEnd
+      );
     }
     // Horizontal Scroller
     let horizontalTrigger = ".section_horizontal-scroller";
@@ -78,7 +97,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let horizontalContent = ".horizontal-scroller_track";
 
     if (areElementsPresent([horizontalTrigger, horizontalContent])) {
-      createHorizontalScroller(horizontalTrigger, horizontalTrigger, horizontalContent);
+      createHorizontalScroller(
+        horizontalTrigger,
+        horizontalTrigger,
+        horizontalContent
+      );
     }
   }
 

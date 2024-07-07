@@ -1,7 +1,12 @@
 const isMarkersOn = false;
 
 // Two Panel, Side by Side
-export function pinTwoPanel(targetStartTrigger, pinnedContent, targetEndTrigger, endString) {
+export function pinTwoPanel(
+  targetStartTrigger,
+  pinnedContent,
+  targetEndTrigger,
+  endString
+) {
   let mm = gsap.matchMedia();
   // let desktopBreakpoint = "(min-width: 992px)";
   let desktopBreakpoint = "(min-width: 768px)";
@@ -25,7 +30,11 @@ export function pinTwoPanel(targetStartTrigger, pinnedContent, targetEndTrigger,
 }
 
 // Horizontal Scroller
-export function createHorizontalScroller(horizontalTrigger, horizontalPin, horizontalContent) {
+export function createHorizontalScroller(
+  horizontalTrigger,
+  horizontalPin,
+  horizontalContent
+) {
   let mm = gsap.matchMedia();
   // let desktopBreakpoint = "(min-width: 992px)";
   let desktopBreakpoint = "(min-width: 768px)";
@@ -34,7 +43,11 @@ export function createHorizontalScroller(horizontalTrigger, horizontalPin, horiz
   // let mobilePortraitBreakpoint = "(max-width: 478px)";
 
   gsap.to(horizontalTrigger, {
-    x: () => -(document.querySelector(horizontalContent).offsetWidth - window.innerWidth),
+    x: () =>
+      -(
+        document.querySelector(horizontalContent).offsetWidth -
+        window.innerWidth
+      ),
     ease: "none",
     scrollTrigger: {
       trigger: horizontalTrigger,
